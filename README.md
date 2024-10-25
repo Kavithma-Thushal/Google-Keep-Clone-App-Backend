@@ -11,15 +11,9 @@ data, user profiles, and reminders.
 
 ## 🚀 Features
 
-✅ **User Authentication**: Secured with Firebase Authentication to manage login and registration.</br>
-✅ **CRUD for Notes**: Users can create, read, update, and delete notes, with support for note color-coding.</br>
-✅ **Task Lists**: Notes can contain task lists, allowing users to organize to-dos.</br>
-✅ **Reminders**: Reminders can be set on notes to send notifications for important tasks or events.</br>
-✅ **Search Functionality**: API enables search functionality, allowing frontend to query notes based on content and
-labels.</br>
-✅ **Media Attachments**: Image attachments in notes are stored securely via Firebase Storage.</br>
-✅ **User Profiles**: API support for creating and managing user profiles, including notes, tasks, reminders, and media
-attachments.</br>
+✅ **CRUD for Users**: Users can create, read, update, and delete their profiles.<br>
+✅ **CRUD for Notes**: Users can create, read, update, and delete notes, with support for note color-coding and
+reminders.<br>
 
 ## 📝 Version
 

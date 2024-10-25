@@ -8,7 +8,6 @@ data, user profiles, and reminders.
 
 ✅ **Express.js**: Manages the backend API, handling data interactions.</br>
 ✅ **MongoDB**: Stores notes, reminders, and user profile information.</br>
-✅ **Firebase**: Provides secure authentication and media storage for note attachments.</br>
 
 ## 🚀 Features
 

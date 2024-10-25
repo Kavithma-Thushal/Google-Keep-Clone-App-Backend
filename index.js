@@ -7,18 +7,18 @@ const userRoute = require('./route/UserRoute');
 
 dotenv.config();
 const app = express();
+const port = process.env.PORT || 8080;
 
 app.use(cors());
 app.use(express.json());
 
-app.use('/api/user', userRoute);
+app.use('/api/v1/user', userRoute);
 
-const PORT = process.env.PORT || 3000;
 mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => {
-        console.log("MongoDB connected successfully!");
-        app.listen(PORT, () => {
-            console.log(`Server running on http://localhost:${PORT}`);
+        console.log('MongoDB Connected Successfully...!');
+        app.listen(port, () => {
+            console.log(`Server is running on port ${port}`);
         });
     })
-    .catch(err => console.log(err));
+    .catch(err => console.error('MongoDB Connection Error: ', err));

@@ -25,16 +25,17 @@ const search = async (req, res) => {
 
 const update = async (req, res) => {
 
-    const {id, username, email, password} = req.body;
+    const {username, email, password} = req.body;
+    const {id} = req.params;
+
     try {
         const updatedUser = await userModel.findByIdAndUpdate(
-            id,
-            {username, email, password},
-            {new: true}
+            id, {username, email, password}, {new: true}
         );
-
-        if (!updatedUser) return res.status(404).json({message: 'User not found'});
-        res.json(updatedUser);
+        if (!updatedUser) {
+            return res.status(404).json({message: 'User not found'});
+        }
+        res.status(200).json({message: 'User updated successfully!'});
     } catch (err) {
         res.status(400).json({message: err.message});
     }

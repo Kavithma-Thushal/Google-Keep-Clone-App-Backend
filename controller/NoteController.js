@@ -2,8 +2,8 @@ const noteModel = require('../model/NoteModel');
 
 const save = async (req, res) => {
 
-    const {title, content, color} = req.body;
-    const newNote = new noteModel({title, content, color});
+    const {title, content, color, username} = req.body;
+    const newNote = new noteModel({title, content, color, username});
 
     try {
         await newNote.save();

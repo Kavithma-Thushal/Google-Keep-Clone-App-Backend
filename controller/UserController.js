@@ -2,8 +2,8 @@ const userModel = require('../model/UserModel');
 
 const register = async (req, res) => {
 
-    const {firebaseUserId, email, password} = req.body;
-    const newUser = new userModel({firebaseUserId, email, password});
+    const {userId, email, password} = req.body;
+    const newUser = new userModel({userId, email, password});
 
     try {
         await newUser.save();

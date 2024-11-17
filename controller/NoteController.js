@@ -11,4 +11,13 @@ const save = async (req, res) => {
     }
 };
 
-module.exports = {save};
+const getAll = async (req, res) => {
+    try {
+        const notes = await noteModel.find();
+        res.status(200).json(notes);
+    } catch (err) {
+        res.status(500).json({message: "Error fetching notes", error: err.message});
+    }
+};
+
+module.exports = {save, getAll};

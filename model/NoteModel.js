@@ -5,6 +5,7 @@ const noteSchema = new mongoose.Schema({
     title: {type: String, required: true},
     content: {type: String, required: true},
     color: {type: String, default: "#ffffff"},
+    imageUrl: {type: String, default: null},
 }, {versionKey: false});
 
 module.exports = mongoose.model('Note', noteSchema);
